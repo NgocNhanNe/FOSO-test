@@ -28,12 +28,12 @@ import { BlogCard, CategoryStyle } from './types';
 // ];
 
 export const categoryStyles: Record<string, CategoryStyle> = {
-  'Thiết Kế Website': { color: '#fff', backgroundColor: '#007bff' },
-  'Thiết Kế App Mobile': { color: '#fff', backgroundColor: '#28a745' },
-  'Quản Lý Sản Xuất': { color: '#fff', backgroundColor: '#dc3545' },
-  'Quản Lý Bán Hàng': { color: '#fff', backgroundColor: '#ffc107' },
-  'Báo Chí Nói Về FOSO': { color: '#fff', backgroundColor: '#6c757d' },
-  'Tin Tức FOSO': { color: '#fff', backgroundColor: '#17a2b8' }
+  'Thiết Kế Website': { color: '#0F4F9E', backgroundColor: '#E2F0FE' },
+  'Thiết Kế App Mobile': { color: '#0F4F9E', backgroundColor: '#28a745' },
+  'Quản Lý Sản Xuất': { color: '#0F4F9E', backgroundColor: '#dc3545' },
+  'Quản Lý Bán Hàng': { color: '#0F4F9E', backgroundColor: '#ffc107' },
+  'Báo Chí Nói Về FOSO': { color: '#0F4F9E', backgroundColor: '#6c757d' },
+  'Tin Tức FOSO': { color: '#0F4F9E', backgroundColor: '#17a2b8' }
 };
 
 export const blogCards: BlogCard[] = [
@@ -42,8 +42,8 @@ export const blogCards: BlogCard[] = [
     category: {
       name: 'Thiết Kế Website',
       style: {
-        color: '#fff',
-        backgroundColor: '#007bff'
+        color: '#0F4F9E',
+        backgroundColor: '#E2F0FE'
       }
     },
     title: 'et sit aliqua adipiscing aliqua',
@@ -55,8 +55,8 @@ export const blogCards: BlogCard[] = [
     category: {
       name: 'Thiết Kế Website',
       style: {
-        color: '#fff',
-        backgroundColor: '#007bff'
+        color: '#0F4F9E',
+        backgroundColor: '#E2F0FE'
       }
     },
     title: 'dolore adipiscing do magna dolor et eiusmod aliqua',
@@ -68,8 +68,8 @@ export const blogCards: BlogCard[] = [
     category: {
       name: 'Thiết Kế Website',
       style: {
-        color: '#fff',
-        backgroundColor: '#007bff'
+        color: '#0F4F9E',
+        backgroundColor: '#E2F0FE'
       }
     },
     title: 'aliqua magna do magna Lorem',
@@ -81,8 +81,8 @@ export const blogCards: BlogCard[] = [
     category: {
       name: 'Thiết Kế Website',
       style: {
-        color: '#fff',
-        backgroundColor: '#007bff'
+        color: '#0F4F9E',
+        backgroundColor: '#E2F0FE'
       }
     },
     title: 'aliqua sit dolor consectetur dolore magna eiusmod',
@@ -94,8 +94,8 @@ export const blogCards: BlogCard[] = [
     category: {
       name: 'Thiết Kế Website',
       style: {
-        color: '#fff',
-        backgroundColor: '#007bff'
+        color: '#0F4F9E',
+        backgroundColor: '#E2F0FE'
       }
     },
     title: 'Lorem aliqua Lorem sed dolor dolore ut',
@@ -107,8 +107,8 @@ export const blogCards: BlogCard[] = [
     category: {
       name: 'Thiết Kế Website',
       style: {
-        color: '#fff',
-        backgroundColor: '#007bff'
+        color: '#0F4F9E',
+        backgroundColor: '#E2F0FE'
       }
     },
     title: 'aliqua Lorem dolore magna do Lorem',
@@ -120,8 +120,8 @@ export const blogCards: BlogCard[] = [
     category: {
       name: 'Thiết Kế Website',
       style: {
-        color: '#fff',
-        backgroundColor: '#007bff'
+        color: '#0F4F9E',
+        backgroundColor: '#E2F0FE'
       }
     },
     title: 'consectetur ut elit adipiscing sed do',
@@ -133,8 +133,8 @@ export const blogCards: BlogCard[] = [
     category: {
       name: 'Thiết Kế Website',
       style: {
-        color: '#fff',
-        backgroundColor: '#007bff'
+        color: '#0F4F9E',
+        backgroundColor: '#E2F0FE'
       }
     },
     title: 'consectetur sed magna adipiscing labore',
@@ -146,8 +146,8 @@ export const blogCards: BlogCard[] = [
     category: {
       name: 'Thiết Kế Website',
       style: {
-        color: '#fff',
-        backgroundColor: '#007bff'
+        color: '#0F4F9E',
+        backgroundColor: '#E2F0FE'
       }
     },
     title: 'et ut consectetur ut elit magna tempor incididunt do',
@@ -159,8 +159,8 @@ export const blogCards: BlogCard[] = [
     category: {
       name: 'Thiết Kế Website',
       style: {
-        color: '#fff',
-        backgroundColor: '#007bff'
+        color: '#0F4F9E',
+        backgroundColor: '#E2F0FE'
       }
     },
     title: 'eiusmod eiusmod sed sit do incididunt amet amet',
@@ -172,8 +172,8 @@ export const blogCards: BlogCard[] = [
     category: {
       name: 'Thiết Kế Website',
       style: {
-        color: '#fff',
-        backgroundColor: '#007bff'
+        color: '#0F4F9E',
+        backgroundColor: '#E2F0FE'
       }
     },
     title: 'eiusmod elit eiusmod sed et labore dolore elit incididunt',
@@ -185,8 +185,8 @@ export const blogCards: BlogCard[] = [
     category: {
       name: 'Thiết Kế Website',
       style: {
-        color: '#fff',
-        backgroundColor: '#007bff'
+        color: '#0F4F9E',
+        backgroundColor: '#E2F0FE'
       }
     },
     title: 'amet ipsum consectetur amet magna dolore sit',
@@ -198,8 +198,8 @@ export const blogCards: BlogCard[] = [
     category: {
       name: 'Thiết Kế Website',
       style: {
-        color: '#fff',
-        backgroundColor: '#007bff'
+        color: '#0F4F9E',
+        backgroundColor: '#E2F0FE'
       }
     },
     title: 'consectetur ipsum sed dolore amet',
@@ -211,8 +211,8 @@ export const blogCards: BlogCard[] = [
     category: {
       name: 'Thiết Kế Website',
       style: {
-        color: '#fff',
-        backgroundColor: '#007bff'
+        color: '#0F4F9E',
+        backgroundColor: '#E2F0FE'
       }
     },
     title: 'ipsum consectetur magna amet magna',
@@ -224,8 +224,8 @@ export const blogCards: BlogCard[] = [
     category: {
       name: 'Thiết Kế Website',
       style: {
-        color: '#fff',
-        backgroundColor: '#007bff'
+        color: '#0F4F9E',
+        backgroundColor: '#E2F0FE'
       }
     },
     title: 'tempor Lorem et eiusmod aliqua do aliqua',
@@ -237,8 +237,8 @@ export const blogCards: BlogCard[] = [
     category: {
       name: 'Thiết Kế Website',
       style: {
-        color: '#fff',
-        backgroundColor: '#007bff'
+        color: '#0F4F9E',
+        backgroundColor: '#E2F0FE'
       }
     },
     title: 'sit elit magna do magna amet',
@@ -250,8 +250,8 @@ export const blogCards: BlogCard[] = [
     category: {
       name: 'Thiết Kế Website',
       style: {
-        color: '#fff',
-        backgroundColor: '#007bff'
+        color: '#0F4F9E',
+        backgroundColor: '#E2F0FE'
       }
     },
     title: 'amet do elit incididunt eiusmod incididunt',
@@ -263,8 +263,8 @@ export const blogCards: BlogCard[] = [
     category: {
       name: 'Thiết Kế Website',
       style: {
-        color: '#fff',
-        backgroundColor: '#007bff'
+        color: '#0F4F9E',
+        backgroundColor: '#E2F0FE'
       }
     },
     title: 'sed dolor sit magna labore ipsum incididunt dolore amet',
@@ -276,8 +276,8 @@ export const blogCards: BlogCard[] = [
     category: {
       name: 'Thiết Kế Website',
       style: {
-        color: '#fff',
-        backgroundColor: '#007bff'
+        color: '#0F4F9E',
+        backgroundColor: '#E2F0FE'
       }
     },
     title: 'consectetur eiusmod dolore dolor sit',
@@ -289,8 +289,8 @@ export const blogCards: BlogCard[] = [
     category: {
       name: 'Thiết Kế Website',
       style: {
-        color: '#fff',
-        backgroundColor: '#007bff'
+        color: '#0F4F9E',
+        backgroundColor: '#E2F0FE'
       }
     },
     title: 'magna et eiusmod sit sed Lorem incididunt tempor',
@@ -302,7 +302,7 @@ export const blogCards: BlogCard[] = [
     category: {
       name: 'Thiết Kế App Mobile',
       style: {
-        color: '#fff',
+        color: '#0F4F9E',
         backgroundColor: '#28a745'
       }
     },
@@ -315,7 +315,7 @@ export const blogCards: BlogCard[] = [
     category: {
       name: 'Thiết Kế App Mobile',
       style: {
-        color: '#fff',
+        color: '#0F4F9E',
         backgroundColor: '#28a745'
       }
     },
@@ -328,7 +328,7 @@ export const blogCards: BlogCard[] = [
     category: {
       name: 'Thiết Kế App Mobile',
       style: {
-        color: '#fff',
+        color: '#0F4F9E',
         backgroundColor: '#28a745'
       }
     },
@@ -341,7 +341,7 @@ export const blogCards: BlogCard[] = [
     category: {
       name: 'Thiết Kế App Mobile',
       style: {
-        color: '#fff',
+        color: '#0F4F9E',
         backgroundColor: '#28a745'
       }
     },
@@ -354,7 +354,7 @@ export const blogCards: BlogCard[] = [
     category: {
       name: 'Thiết Kế App Mobile',
       style: {
-        color: '#fff',
+        color: '#0F4F9E',
         backgroundColor: '#28a745'
       }
     },
@@ -367,7 +367,7 @@ export const blogCards: BlogCard[] = [
     category: {
       name: 'Thiết Kế App Mobile',
       style: {
-        color: '#fff',
+        color: '#0F4F9E',
         backgroundColor: '#28a745'
       }
     },
@@ -380,7 +380,7 @@ export const blogCards: BlogCard[] = [
     category: {
       name: 'Thiết Kế App Mobile',
       style: {
-        color: '#fff',
+        color: '#0F4F9E',
         backgroundColor: '#28a745'
       }
     },
@@ -393,7 +393,7 @@ export const blogCards: BlogCard[] = [
     category: {
       name: 'Thiết Kế App Mobile',
       style: {
-        color: '#fff',
+        color: '#0F4F9E',
         backgroundColor: '#28a745'
       }
     },
@@ -406,7 +406,7 @@ export const blogCards: BlogCard[] = [
     category: {
       name: 'Thiết Kế App Mobile',
       style: {
-        color: '#fff',
+        color: '#0F4F9E',
         backgroundColor: '#28a745'
       }
     },
@@ -419,7 +419,7 @@ export const blogCards: BlogCard[] = [
     category: {
       name: 'Thiết Kế App Mobile',
       style: {
-        color: '#fff',
+        color: '#0F4F9E',
         backgroundColor: '#28a745'
       }
     },
@@ -432,7 +432,7 @@ export const blogCards: BlogCard[] = [
     category: {
       name: 'Quản Lý Sản Xuất',
       style: {
-        color: '#fff',
+        color: '#0F4F9E',
         backgroundColor: '#dc3545'
       }
     },
@@ -445,7 +445,7 @@ export const blogCards: BlogCard[] = [
     category: {
       name: 'Quản Lý Sản Xuất',
       style: {
-        color: '#fff',
+        color: '#0F4F9E',
         backgroundColor: '#dc3545'
       }
     },
@@ -458,7 +458,7 @@ export const blogCards: BlogCard[] = [
     category: {
       name: 'Quản Lý Sản Xuất',
       style: {
-        color: '#fff',
+        color: '#0F4F9E',
         backgroundColor: '#dc3545'
       }
     },
@@ -471,7 +471,7 @@ export const blogCards: BlogCard[] = [
     category: {
       name: 'Quản Lý Sản Xuất',
       style: {
-        color: '#fff',
+        color: '#0F4F9E',
         backgroundColor: '#dc3545'
       }
     },
@@ -484,7 +484,7 @@ export const blogCards: BlogCard[] = [
     category: {
       name: 'Quản Lý Sản Xuất',
       style: {
-        color: '#fff',
+        color: '#0F4F9E',
         backgroundColor: '#dc3545'
       }
     },
@@ -497,7 +497,7 @@ export const blogCards: BlogCard[] = [
     category: {
       name: 'Quản Lý Sản Xuất',
       style: {
-        color: '#fff',
+        color: '#0F4F9E',
         backgroundColor: '#dc3545'
       }
     },
@@ -510,7 +510,7 @@ export const blogCards: BlogCard[] = [
     category: {
       name: 'Quản Lý Sản Xuất',
       style: {
-        color: '#fff',
+        color: '#0F4F9E',
         backgroundColor: '#dc3545'
       }
     },
@@ -523,7 +523,7 @@ export const blogCards: BlogCard[] = [
     category: {
       name: 'Quản Lý Sản Xuất',
       style: {
-        color: '#fff',
+        color: '#0F4F9E',
         backgroundColor: '#dc3545'
       }
     },
@@ -536,7 +536,7 @@ export const blogCards: BlogCard[] = [
     category: {
       name: 'Quản Lý Sản Xuất',
       style: {
-        color: '#fff',
+        color: '#0F4F9E',
         backgroundColor: '#dc3545'
       }
     },
@@ -549,7 +549,7 @@ export const blogCards: BlogCard[] = [
     category: {
       name: 'Quản Lý Sản Xuất',
       style: {
-        color: '#fff',
+        color: '#0F4F9E',
         backgroundColor: '#dc3545'
       }
     },
@@ -562,7 +562,7 @@ export const blogCards: BlogCard[] = [
     category: {
       name: 'Quản Lý Sản Xuất',
       style: {
-        color: '#fff',
+        color: '#0F4F9E',
         backgroundColor: '#dc3545'
       }
     },
@@ -575,7 +575,7 @@ export const blogCards: BlogCard[] = [
     category: {
       name: 'Quản Lý Sản Xuất',
       style: {
-        color: '#fff',
+        color: '#0F4F9E',
         backgroundColor: '#dc3545'
       }
     },
@@ -588,7 +588,7 @@ export const blogCards: BlogCard[] = [
     category: {
       name: 'Quản Lý Sản Xuất',
       style: {
-        color: '#fff',
+        color: '#0F4F9E',
         backgroundColor: '#dc3545'
       }
     },
@@ -601,7 +601,7 @@ export const blogCards: BlogCard[] = [
     category: {
       name: 'Quản Lý Sản Xuất',
       style: {
-        color: '#fff',
+        color: '#0F4F9E',
         backgroundColor: '#dc3545'
       }
     },
@@ -614,7 +614,7 @@ export const blogCards: BlogCard[] = [
     category: {
       name: 'Quản Lý Sản Xuất',
       style: {
-        color: '#fff',
+        color: '#0F4F9E',
         backgroundColor: '#dc3545'
       }
     },
@@ -627,7 +627,7 @@ export const blogCards: BlogCard[] = [
     category: {
       name: 'Quản Lý Sản Xuất',
       style: {
-        color: '#fff',
+        color: '#0F4F9E',
         backgroundColor: '#dc3545'
       }
     },
@@ -640,7 +640,7 @@ export const blogCards: BlogCard[] = [
     category: {
       name: 'Quản Lý Sản Xuất',
       style: {
-        color: '#fff',
+        color: '#0F4F9E',
         backgroundColor: '#dc3545'
       }
     },
@@ -653,7 +653,7 @@ export const blogCards: BlogCard[] = [
     category: {
       name: 'Quản Lý Sản Xuất',
       style: {
-        color: '#fff',
+        color: '#0F4F9E',
         backgroundColor: '#dc3545'
       }
     },
@@ -666,7 +666,7 @@ export const blogCards: BlogCard[] = [
     category: {
       name: 'Quản Lý Sản Xuất',
       style: {
-        color: '#fff',
+        color: '#0F4F9E',
         backgroundColor: '#dc3545'
       }
     },
@@ -679,7 +679,7 @@ export const blogCards: BlogCard[] = [
     category: {
       name: 'Quản Lý Sản Xuất',
       style: {
-        color: '#fff',
+        color: '#0F4F9E',
         backgroundColor: '#dc3545'
       }
     },
@@ -692,7 +692,7 @@ export const blogCards: BlogCard[] = [
     category: {
       name: 'Quản Lý Sản Xuất',
       style: {
-        color: '#fff',
+        color: '#0F4F9E',
         backgroundColor: '#dc3545'
       }
     },
@@ -705,7 +705,7 @@ export const blogCards: BlogCard[] = [
     category: {
       name: 'Quản Lý Sản Xuất',
       style: {
-        color: '#fff',
+        color: '#0F4F9E',
         backgroundColor: '#dc3545'
       }
     },
@@ -718,7 +718,7 @@ export const blogCards: BlogCard[] = [
     category: {
       name: 'Quản Lý Sản Xuất',
       style: {
-        color: '#fff',
+        color: '#0F4F9E',
         backgroundColor: '#dc3545'
       }
     },
@@ -731,7 +731,7 @@ export const blogCards: BlogCard[] = [
     category: {
       name: 'Quản Lý Bán Hàng',
       style: {
-        color: '#fff',
+        color: '#0F4F9E',
         backgroundColor: '#ffc107'
       }
     },
@@ -744,7 +744,7 @@ export const blogCards: BlogCard[] = [
     category: {
       name: 'Quản Lý Bán Hàng',
       style: {
-        color: '#fff',
+        color: '#0F4F9E',
         backgroundColor: '#ffc107'
       }
     },
@@ -757,7 +757,7 @@ export const blogCards: BlogCard[] = [
     category: {
       name: 'Quản Lý Bán Hàng',
       style: {
-        color: '#fff',
+        color: '#0F4F9E',
         backgroundColor: '#ffc107'
       }
     },
@@ -770,7 +770,7 @@ export const blogCards: BlogCard[] = [
     category: {
       name: 'Quản Lý Bán Hàng',
       style: {
-        color: '#fff',
+        color: '#0F4F9E',
         backgroundColor: '#ffc107'
       }
     },
@@ -783,7 +783,7 @@ export const blogCards: BlogCard[] = [
     category: {
       name: 'Quản Lý Bán Hàng',
       style: {
-        color: '#fff',
+        color: '#0F4F9E',
         backgroundColor: '#ffc107'
       }
     },
@@ -796,7 +796,7 @@ export const blogCards: BlogCard[] = [
     category: {
       name: 'Quản Lý Bán Hàng',
       style: {
-        color: '#fff',
+        color: '#0F4F9E',
         backgroundColor: '#ffc107'
       }
     },
@@ -809,7 +809,7 @@ export const blogCards: BlogCard[] = [
     category: {
       name: 'Quản Lý Bán Hàng',
       style: {
-        color: '#fff',
+        color: '#0F4F9E',
         backgroundColor: '#ffc107'
       }
     },
@@ -822,7 +822,7 @@ export const blogCards: BlogCard[] = [
     category: {
       name: 'Quản Lý Bán Hàng',
       style: {
-        color: '#fff',
+        color: '#0F4F9E',
         backgroundColor: '#ffc107'
       }
     },
@@ -835,7 +835,7 @@ export const blogCards: BlogCard[] = [
     category: {
       name: 'Quản Lý Bán Hàng',
       style: {
-        color: '#fff',
+        color: '#0F4F9E',
         backgroundColor: '#ffc107'
       }
     },
@@ -848,7 +848,7 @@ export const blogCards: BlogCard[] = [
     category: {
       name: 'Quản Lý Bán Hàng',
       style: {
-        color: '#fff',
+        color: '#0F4F9E',
         backgroundColor: '#ffc107'
       }
     },
@@ -861,7 +861,7 @@ export const blogCards: BlogCard[] = [
     category: {
       name: 'Quản Lý Bán Hàng',
       style: {
-        color: '#fff',
+        color: '#0F4F9E',
         backgroundColor: '#ffc107'
       }
     },
@@ -874,7 +874,7 @@ export const blogCards: BlogCard[] = [
     category: {
       name: 'Quản Lý Bán Hàng',
       style: {
-        color: '#fff',
+        color: '#0F4F9E',
         backgroundColor: '#ffc107'
       }
     },
@@ -887,7 +887,7 @@ export const blogCards: BlogCard[] = [
     category: {
       name: 'Quản Lý Bán Hàng',
       style: {
-        color: '#fff',
+        color: '#0F4F9E',
         backgroundColor: '#ffc107'
       }
     },
@@ -900,7 +900,7 @@ export const blogCards: BlogCard[] = [
     category: {
       name: 'Quản Lý Bán Hàng',
       style: {
-        color: '#fff',
+        color: '#0F4F9E',
         backgroundColor: '#ffc107'
       }
     },
@@ -913,7 +913,7 @@ export const blogCards: BlogCard[] = [
     category: {
       name: 'Quản Lý Bán Hàng',
       style: {
-        color: '#fff',
+        color: '#0F4F9E',
         backgroundColor: '#ffc107'
       }
     },
@@ -926,7 +926,7 @@ export const blogCards: BlogCard[] = [
     category: {
       name: 'Quản Lý Bán Hàng',
       style: {
-        color: '#fff',
+        color: '#0F4F9E',
         backgroundColor: '#ffc107'
       }
     },
@@ -939,7 +939,7 @@ export const blogCards: BlogCard[] = [
     category: {
       name: 'Quản Lý Bán Hàng',
       style: {
-        color: '#fff',
+        color: '#0F4F9E',
         backgroundColor: '#ffc107'
       }
     },
@@ -952,7 +952,7 @@ export const blogCards: BlogCard[] = [
     category: {
       name: 'Quản Lý Bán Hàng',
       style: {
-        color: '#fff',
+        color: '#0F4F9E',
         backgroundColor: '#ffc107'
       }
     },
@@ -965,7 +965,7 @@ export const blogCards: BlogCard[] = [
     category: {
       name: 'Báo Chí Nói Về FOSO',
       style: {
-        color: '#fff',
+        color: '#0F4F9E',
         backgroundColor: '#6c757d'
       }
     },
@@ -978,7 +978,7 @@ export const blogCards: BlogCard[] = [
     category: {
       name: 'Báo Chí Nói Về FOSO',
       style: {
-        color: '#fff',
+        color: '#0F4F9E',
         backgroundColor: '#6c757d'
       }
     },
@@ -991,7 +991,7 @@ export const blogCards: BlogCard[] = [
     category: {
       name: 'Báo Chí Nói Về FOSO',
       style: {
-        color: '#fff',
+        color: '#0F4F9E',
         backgroundColor: '#6c757d'
       }
     },
@@ -1004,7 +1004,7 @@ export const blogCards: BlogCard[] = [
     category: {
       name: 'Báo Chí Nói Về FOSO',
       style: {
-        color: '#fff',
+        color: '#0F4F9E',
         backgroundColor: '#6c757d'
       }
     },
@@ -1017,7 +1017,7 @@ export const blogCards: BlogCard[] = [
     category: {
       name: 'Báo Chí Nói Về FOSO',
       style: {
-        color: '#fff',
+        color: '#0F4F9E',
         backgroundColor: '#6c757d'
       }
     },
@@ -1030,7 +1030,7 @@ export const blogCards: BlogCard[] = [
     category: {
       name: 'Tin Tức FOSO',
       style: {
-        color: '#fff',
+        color: '#0F4F9E',
         backgroundColor: '#17a2b8'
       }
     },
@@ -1043,7 +1043,7 @@ export const blogCards: BlogCard[] = [
     category: {
       name: 'Tin Tức FOSO',
       style: {
-        color: '#fff',
+        color: '#0F4F9E',
         backgroundColor: '#17a2b8'
       }
     },
@@ -1056,7 +1056,7 @@ export const blogCards: BlogCard[] = [
     category: {
       name: 'Tin Tức FOSO',
       style: {
-        color: '#fff',
+        color: '#0F4F9E',
         backgroundColor: '#17a2b8'
       }
     },
@@ -1069,7 +1069,7 @@ export const blogCards: BlogCard[] = [
     category: {
       name: 'Tin Tức FOSO',
       style: {
-        color: '#fff',
+        color: '#0F4F9E',
         backgroundColor: '#17a2b8'
       }
     },
@@ -1082,7 +1082,7 @@ export const blogCards: BlogCard[] = [
     category: {
       name: 'Tin Tức FOSO',
       style: {
-        color: '#fff',
+        color: '#0F4F9E',
         backgroundColor: '#17a2b8'
       }
     },
@@ -1095,7 +1095,7 @@ export const blogCards: BlogCard[] = [
     category: {
       name: 'Tin Tức FOSO',
       style: {
-        color: '#fff',
+        color: '#0F4F9E',
         backgroundColor: '#17a2b8'
       }
     },
@@ -1108,7 +1108,7 @@ export const blogCards: BlogCard[] = [
     category: {
       name: 'Tin Tức FOSO',
       style: {
-        color: '#fff',
+        color: '#0F4F9E',
         backgroundColor: '#17a2b8'
       }
     },
@@ -1121,7 +1121,7 @@ export const blogCards: BlogCard[] = [
     category: {
       name: 'Tin Tức FOSO',
       style: {
-        color: '#fff',
+        color: '#0F4F9E',
         backgroundColor: '#17a2b8'
       }
     },
@@ -1134,7 +1134,7 @@ export const blogCards: BlogCard[] = [
     category: {
       name: 'Tin Tức FOSO',
       style: {
-        color: '#fff',
+        color: '#0F4F9E',
         backgroundColor: '#17a2b8'
       }
     },
@@ -1147,7 +1147,7 @@ export const blogCards: BlogCard[] = [
     category: {
       name: 'Tin Tức FOSO',
       style: {
-        color: '#fff',
+        color: '#0F4F9E',
         backgroundColor: '#17a2b8'
       }
     },
@@ -1160,7 +1160,7 @@ export const blogCards: BlogCard[] = [
     category: {
       name: 'Tin Tức FOSO',
       style: {
-        color: '#fff',
+        color: '#0F4F9E',
         backgroundColor: '#17a2b8'
       }
     },
@@ -1173,7 +1173,7 @@ export const blogCards: BlogCard[] = [
     category: {
       name: 'Tin Tức FOSO',
       style: {
-        color: '#fff',
+        color: '#0F4F9E',
         backgroundColor: '#17a2b8'
       }
     },
@@ -1186,7 +1186,7 @@ export const blogCards: BlogCard[] = [
     category: {
       name: 'Tin Tức FOSO',
       style: {
-        color: '#fff',
+        color: '#0F4F9E',
         backgroundColor: '#17a2b8'
       }
     },

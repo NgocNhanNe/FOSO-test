@@ -6,24 +6,30 @@ import fmrp from '../../../assets/images/fmrp.png';
 import magnifying from '../../../assets/icons/MagnifyingGlass.svg';
 import { FOSOButton } from '@/components/FOSOButton';
 import { FOSOInput } from '@/components/FOSOInput';
-import { CategoryCount } from '@/app/_lib/types';
+import { BlogCard, CategoryCount } from '@/app/_lib/types';
 import { useEffect, useState } from 'react';
+import { FOSOBlogCard } from '@/components/FOSOBlogCard';
 // import { categoriesWithCount } from '@/app/_lib/data';
 
 export default function BlogPage() {
   const [categoriesWithCount, setCategoriesWithCount] = useState<CategoryCount[]>([]);
+  const [blogs, setBlogs] = useState<BlogCard[]>([]);
 
   const handleTotal = categoriesWithCount.reduce(
     (acc, category) => acc + category.count,
     0
   );
 
-  console.log(categoriesWithCount);
-
   useEffect(() => {
     fetch('/apis/categories')
       .then(res => res.json())
       .then(data => setCategoriesWithCount(data.categories));
+  }, []);
+
+  useEffect(() => {
+    fetch('/apis/blogs?limit=100')
+      .then(res => res.json())
+      .then(data => setBlogs(data.blogs));
   }, []);
 
   return (
@@ -48,31 +54,41 @@ export default function BlogPage() {
       </div>
       <div className='w-full px-6 flex justify-center '>
         <div className='w-full max-w-[1440px] flex gap-8'>
-          <div className='w-[80%]'>
+          <div className='w-[75%] flex flex-col gap-6'>
             <p className='text-4xl font-[800]'>Tất cả bài viết</p>
-            <div className='flex h-[318px] w-full bg-gradient-to-r from-[#013DA0] via-[#025ACE] to-[#0375F3] rounded-[40px]'>
-              <div className='w-[50%] flex flex-col gap-8 justify-center pl-[60px]'>
-                <p className='text-4xl font-[700] max-w-[376px] text-white leading-12'>
-                  Gia nhập cộng đồng FMRP – Kết nối, chia sẻ, cùng phát triển!
-                </p>
-                <FOSOButton
-                  title='Tham Gia Ngay'
-                  icon={arrowUpRight}
-                  variants='outline'
-                />
+            <div className='flex flex-col gap-12'>
+              <div className='flex h-[318px] w-full bg-gradient-to-r from-[#013DA0] via-[#025ACE] to-[#0375F3] rounded-[40px]'>
+                <div className='w-[50%] flex flex-col gap-8 justify-center pl-[60px]'>
+                  <p className='text-4xl font-[700] max-w-[376px] text-white leading-12'>
+                    Gia nhập cộng đồng FMRP – Kết nối, chia sẻ, cùng phát triển!
+                  </p>
+                  <FOSOButton
+                    title='Tham Gia Ngay'
+                    icon={arrowUpRight}
+                    variants='outline'
+                  />
+                </div>
+                <div className='w-[50%] h-[100%]'>
+                  <Image
+                    alt='fmrp'
+                    src={fmrp}
+                    width={400}
+                    height={150}
+                    className='w-full object-contain h-[100%]'
+                  />
+                </div>
               </div>
-              <div className='w-[50%] h-[100%]'>
-                <Image
-                  alt='fmrp'
-                  src={fmrp}
-                  width={400}
-                  height={150}
-                  className='w-full object-contain h-[100%]'
-                />
+              <div className='flex flex-wrap gap-8 justify-center'>
+                {blogs.map((blog, i) => (
+                  <FOSOBlogCard
+                    blog={blog}
+                    key={i}
+                  />
+                ))}
               </div>
             </div>
           </div>
-          <div className='w-[20%] flex flex-col gap-8'>
+          <div className='w-[25%] flex flex-col gap-8'>
             <div className='flex gap-6 flex-col'>
               <p className='text-2xl font-[800]'>Tìm kiếm</p>
               <FOSOInput

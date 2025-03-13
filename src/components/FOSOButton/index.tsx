@@ -9,8 +9,10 @@ export const FOSOButton = ({
   const baseClasses = 'w-fit flex items-center gap-4 py-2';
   const variantClasses =
     variants === 'text'
-      ? 'pr-4'
+      ? 'pr-4 text-[#667F93]'
       : 'px-6 gap-8 justify-center border border-white border-2 rounded-[40px] text-white font-[700] text-sm';
+
+  const iconSize = variants === 'text' ? 'w-12 h-12' : 'w-8 h-8';
 
   return (
     <button
@@ -18,12 +20,12 @@ export const FOSOButton = ({
       {...buttonProps}
     >
       {title}
-      <div className='w-8 h-8 flex items-center justify-center'>
+      <div className={`${iconSize} flex items-center justify-center`}>
         <Image
           src={icon}
           alt='icon'
-          width={18}
-          height={18}
+          width={variants === 'outline' ? 18 : 24}
+          height={variants === 'outline' ? 18 : 24}
         />
       </div>
     </button>
