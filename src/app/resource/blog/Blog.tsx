@@ -97,7 +97,7 @@ export default function BlogPage({
             &nbsp;– <br />
             Cập Nhật Tin Tức
             <span className='relative font-[800]'>
-              <span className=' relative z-1'>Mới Nhất</span>
+              <span className=' relative z-1'>&nbsp; Mới Nhất</span>
               <div className='absolute bg-[#A3EED6] w-[100%] h-8 rounded-[40px] top-10 left-0 z-0'></div>
             </span>
           </div>
