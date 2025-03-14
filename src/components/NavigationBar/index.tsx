@@ -20,7 +20,7 @@ const languages: ListItem[] = [
 export const NavigationBar = () => {
   const router = useRouter();
   return (
-    <div className='w-full flex items-center justify-center fixed top-6 text-[#25272A] z-1'>
+    <div className='w-full flex items-center justify-center fixed top-6 text-[#25272A] z-100'>
       <div className='cursor-pointer text-sm flex items-center justify-center w-[1280px] h-auto rounded-[40px] p-[12px_36px] gap-[64px] backdrop-blur-[25px] shadow-[inset_0px_2px_83.99px_rgba(0,0,0,0.02),-9px_20px_59.99px_-24px_rgba(0,0,0,0.05),1px_-1px_0px_0px_#FFFFFF,-1px_1px_0px_0px_#F0F0F0]'>
         <Image
           src={logo}

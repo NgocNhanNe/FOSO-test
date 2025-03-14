@@ -151,7 +151,7 @@ export default function BlogDetailPage({ params }: { params: Promise<{ id: numbe
   };
 
   return (
-    <div className='relative w-full flex flex-col justify-center items-center pt-[128px] px-10 z-0'>
+    <div className='relative w-full flex flex-col justify-center items-center pt-[128px] px-10 z-0 bg-[#f9fbfc]'>
       <div className='w-full max-w-[1440px] flex flex-col gap-6'>
         <div className='font-light text-sm text-[#17181A] pb-6'>
           Trang chủ &gt; Tài nguyên &gt; Blog &gt;

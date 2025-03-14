@@ -13,7 +13,10 @@ import { FOSOPagination } from '@/components/FOSOPagination';
 import { FOSOAdds } from '@/components/FOSOAdds';
 import { usePathname, useRouter, useSearchParams } from 'next/navigation';
 import { useDebounce } from '@/app/_lib/hooks/useDebounce';
-
+import calendarBG from '../../../assets/images/hero1.svg';
+import handBG from '../../../assets/images/hero2.svg';
+import bgLeft from '../../../assets/images/bgleft.png';
+import bgRight from '../../../assets/images/bg2.png';
 const limit = 6;
 
 export default function BlogPage({
@@ -79,27 +82,47 @@ export default function BlogPage({
   ]);
 
   return (
-    <div className="pt-[128px] bg-[url('/bg-blog.jpg')] bg-no-repeat bg-contain ">
-      <div className='w-full flex justify-center items-center pt-12 pb-[100px]'>
-        <div className='w-full max-w-[1280px] flex gap-1 flex-col'>
+    <div className='pt-[128px] bg-[#f9fbfc]'>
+      <div className='relative w-full flex justify-center items-center pt-12 pb-[100px]'>
+        <div className='w-full max-w-[1280px] flex gap-1 flex-col  z-1'>
           <div className='font-light text-center text-sm text-[#17181A] pb-16'>
             Trang chủ &gt; Tài nguyên &gt; <span className='font-semibold'>Blog</span>
           </div>
-          <div className='text-6xl text-[#050505] text-center leading-[100px]'>
+          <div className='relative text-6xl text-[#050505] text-center leading-[100px]'>
             Blog
             <span className='font-[800] bg-gradient-to-r from-[#53b086] via-[#85EEB3] to-[#53b086] bg-clip-text text-transparent'>
               &nbsp;FOSO
             </span>
             &nbsp;– <br />
-            Cập Nhật Tin Tức <span className='font-[800]'>Mới Nhất</span>
+            Cập Nhật Tin Tức{' '}
+            <span className='relative font-[800]'>
+              <span className=' relative z-1'>Mới Nhất</span>
+              <div className='absolute bg-[#A3EED6] w-[100%] h-8 rounded-[40px] top-10 left-0 z-0'></div>
+            </span>
           </div>
           <div className='text-[#33404A] text-lg text-center'>
             Cùng FOSO khám phá kiến thức, xu hướng công nghệ và sản xuất ngay!
           </div>
         </div>
+        <div className='absolute top-10 left-[43px] z-0'>
+          <Image
+            src={calendarBG}
+            alt=''
+            width={282}
+            height={282}
+          />
+        </div>
+        <div className='absolute top-10 right-0 z-0'>
+          <Image
+            src={handBG}
+            alt=''
+            width={320}
+            height={251}
+          />
+        </div>
       </div>
       <div className='w-full px-6 flex flex-col gap-16 justify-center items-center pb-100'>
-        <div className='w-full max-w-[1440px] flex justify-center gap-8'>
+        <div className='w-full max-w-[1440px] flex justify-center gap-8 z-1'>
           <div className='w-[74%] flex flex-col gap-6'>
             <p className='text-4xl font-[800]'>{selectedCategory || 'Tất cả bài viết'}</p>
             <div className='flex flex-col gap-12'>
@@ -187,13 +210,30 @@ export default function BlogPage({
             <FOSOAdds />
           </div>
         </div>
-        <div className='w-full max-w-[1440px]'>
+        <div className='w-full max-w-[1440px] z-1'>
           <FOSOPagination
             currentPage={currentPage}
             totalPages={Math.ceil(total / limit)}
             onPageChange={setCurrentPage}
           />
         </div>
+      </div>
+
+      <div className='absolute top-[400px] left-0 z-0'>
+        <Image
+          src={bgLeft}
+          alt=''
+          width={500}
+          height={500}
+        />
+      </div>
+      <div className='absolute top-[2300px] right-0 z-0'>
+        <Image
+          src={bgRight}
+          alt=''
+          width={500}
+          height={500}
+        />
       </div>
     </div>
   );
