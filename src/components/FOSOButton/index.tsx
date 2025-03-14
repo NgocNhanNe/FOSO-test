@@ -6,18 +6,18 @@ export const FOSOButton = ({
   variants = 'outline',
   buttonProps
 }: FOSOButtonProps) => {
-  const baseClasses = 'w-fit flex items-center gap-4 py-2';
+  const baseClasses = 'flex items-center gap-4 py-2 cursor-pointer';
   const variantClasses =
     variants === 'text'
       ? 'pr-4 text-[#667F93]'
-      : 'px-6 gap-8 justify-center border border-white border-2 rounded-[40px] text-white font-[700] text-sm';
+      : 'px-6 gap-8 justify-between border border-white border-2 rounded-[40px] text-white font-[700] text-sm';
 
   const iconSize = variants === 'text' ? 'w-12 h-12' : 'w-8 h-8';
 
   return (
     <button
-      className={`${baseClasses} ${variantClasses}`}
       {...buttonProps}
+      className={`${baseClasses} ${variantClasses}`}
     >
       {title}
       <div className={`${iconSize} flex items-center justify-center`}>

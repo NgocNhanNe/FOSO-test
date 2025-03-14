@@ -16,7 +16,7 @@ const formatDate = (isoString: string): string => {
 
 export const FOSOBlogCard = ({ blog }: FOSOBlogCardProps) => {
   return (
-    <div className='flex flex-col w-[505px]'>
+    <div className='flex flex-col w-[500px] cursor-pointer'>
       <div className='rounded-[24px] '>
         <Image
           src={blog.image}
@@ -35,7 +35,7 @@ export const FOSOBlogCard = ({ blog }: FOSOBlogCardProps) => {
         >
           <span style={{ color: blog.category.style.color }}>{blog.category.name}</span>
         </div>
-        <div className=' h-[72px] text-2xl font-[800]'>{blog.title}</div>
+        <div className=' h-[72px] text-2xl font-[800] text-[#33404A]'>{blog.title}</div>
         <div className='flex gap-3'>
           <div className='flex items-center gap-2'>
             <Image

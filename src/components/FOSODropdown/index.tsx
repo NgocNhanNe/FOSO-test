@@ -14,10 +14,10 @@ export const FOSODropdown = ({ title, type, listItems }: FOSODropdownProps) => {
     setIsOpen(false);
   };
   return type === 'bold-title' ? (
-    <div className='relative inline-block text-left'>
+    <div className='relative inline-block text-left '>
       <button
         onClick={() => setIsOpen(!isOpen)}
-        className='flex items-center gap-1 text-gray-800 hover:text-black'
+        className='flex items-center gap-1 text-gray-800 hover:text-black cursor-pointer	'
       >
         {title} <ChevronDown className='w-4 h-4' />
       </button>
@@ -37,10 +37,10 @@ export const FOSODropdown = ({ title, type, listItems }: FOSODropdownProps) => {
       )}
     </div>
   ) : type === 'has-icon' ? (
-    <div className='relative inline-block text-left'>
+    <div className='relative inline-block text-left '>
       <button
         onClick={() => setIsOpen(!isOpen)}
-        className='flex items-center gap-3 text-gray-800 hover:text-black'
+        className='flex items-center gap-3 text-gray-800 hover:text-black cursor-pointer	'
       >
         <Image
           src={selected.icon || iconCountry}
