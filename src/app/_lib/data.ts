@@ -718,7 +718,7 @@ export const blogs: BlogCard[] = [
         backgroundColor: '#E2F0FE'
       }
     },
-    title: 'dolore adipiscing do magna dolor et eiusmod aliqua',
+    title: 'Tại sao BOM quan trọng trong quản lý sản xuất?',
     publishedAt: '2025-03-13T19:57:00.811Z',
     readingTime: 11
   },
@@ -733,13 +733,13 @@ export const blogs: BlogCard[] = [
         backgroundColor: '#E2F0FE'
       }
     },
-    title: 'aliqua magna do magna Lorem',
+    title: 'Các loại hình sản xuất trong doanh nghiệp',
     publishedAt: '2025-03-13T19:57:00.811Z',
     readingTime: 3
   },
   {
     id: 4,
-    image: 'https://robohash.org/0.9675590877811582',
+    image: 'https://fososoft.vn/wp-content/uploads/2023/09/bao-cong-nghe-2.3.png',
     category: {
       name: 'Thiết Kế Website',
       style: {
@@ -747,13 +747,13 @@ export const blogs: BlogCard[] = [
         backgroundColor: '#E2F0FE'
       }
     },
-    title: 'aliqua sit dolor consectetur dolore magna eiusmod',
+    title: 'Quản lý sản xuất thông minh với giải pháp phần mềm FMRP',
     publishedAt: '2025-03-13T19:57:00.811Z',
     readingTime: 5
   },
   {
     id: 21,
-    image: 'https://robohash.org/0.20189106900367904',
+    image: 'https://fososoft.vn/wp-content/uploads/2023/10/thiet-ke-phan-mem-2.png',
     category: {
       name: 'Thiết Kế App Mobile',
       style: {
@@ -761,13 +761,13 @@ export const blogs: BlogCard[] = [
         backgroundColor: '#d1f7ea'
       }
     },
-    title: 'aliqua dolore adipiscing consectetur magna ipsum sit',
+    title: 'Top 5 công ty thiết kế phần mềm tốt nhất hiện nay 2023',
     publishedAt: '2025-03-13T19:57:00.812Z',
     readingTime: 4
   },
   {
     id: 22,
-    image: 'https://robohash.org/0.29478542571685384',
+    image: 'https://fososoft.vn/wp-content/uploads/2023/09/bao-cong-nghe-2.3.png',
     category: {
       name: 'Thiết Kế App Mobile',
       style: {
@@ -775,13 +775,13 @@ export const blogs: BlogCard[] = [
         backgroundColor: '#d1f7ea'
       }
     },
-    title: 'adipiscing dolore amet incididunt tempor tempor amet',
+    title: 'Giá thiết kế app mobile 2023? Yếu tố ảnh hưởng đến chi phí thiết kế app?',
     publishedAt: '2025-03-13T19:57:00.812Z',
     readingTime: 7
   },
   {
     id: 23,
-    image: 'https://robohash.org/0.9644106305218847',
+    image: 'https://fososoft.vn/wp-content/uploads/2023/10/thiet-ke-app.png',
     category: {
       name: 'Thiết Kế App Mobile',
       style: {
@@ -789,7 +789,7 @@ export const blogs: BlogCard[] = [
         backgroundColor: '#d1f7ea'
       }
     },
-    title: 'labore adipiscing Lorem elit dolor aliqua incididunt',
+    title: 'Dịch vụ thiết kế app theo yêu cầu doanh nghiệp từ FOSO',
     publishedAt: '2025-03-13T19:57:00.812Z',
     readingTime: 4
   },

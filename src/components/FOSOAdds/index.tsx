@@ -3,7 +3,7 @@ import arrowUpRight from '../../assets/icons/ArrowUpRight.svg';
 import Group from '../../assets/images/Group.png';
 import calculate from '../../assets/images/calculate.png';
 import robot from '../../assets/images/robot.png';
-import logoMRP from '../../assets/images/logoMRP.svg';
+import logoMRP from '../../assets/images/logoMRP.png';
 import { FOSOButton } from '@/components/FOSOButton';
 
 export const FOSOAdds = () => {
@@ -14,8 +14,9 @@ export const FOSOAdds = () => {
           <Image
             alt='calculate'
             src={calculate}
-            width={400}
-            height={200}
+            width={1432}
+            height={1049}
+            quality={100}
             className=' object-contain '
           />
         </div>
@@ -27,6 +28,7 @@ export const FOSOAdds = () => {
                 src={robot}
                 width={136}
                 height={136}
+                quality={100}
                 className='object-contain '
               />
             </div>
@@ -38,6 +40,7 @@ export const FOSOAdds = () => {
                   src={logoMRP}
                   width={155}
                   height={136}
+                  quality={100}
                   className=' object-contain '
                 />
               </div>
@@ -60,6 +63,7 @@ export const FOSOAdds = () => {
             src={Group}
             width={400}
             height={500}
+            quality={100}
             className='w-full object-contain h-[100%]'
           />
         </div>

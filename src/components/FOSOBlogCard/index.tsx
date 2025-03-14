@@ -12,7 +12,7 @@ import { useRouter } from 'next/navigation';
 export const FOSOBlogCard = ({ blog }: FOSOBlogCardProps) => {
   const router = useRouter();
   return (
-    <div className='flex flex-col cursor-pointer'>
+    <div className='flex flex-col cursor-pointer hover:scale-95 transition-transform duration-300'>
       <div className='w-full rounded-[24px] flex-1 cursor-pointer'>
         <Image
           src={blog.image}
@@ -55,14 +55,16 @@ export const FOSOBlogCard = ({ blog }: FOSOBlogCardProps) => {
             <span className='text-[#667F93]'>{blog.readingTime} phút đọc</span>
           </div>
         </div>
-        <FOSOButton
-          variants='text'
-          title='Khám phá thêm'
-          icon={ArrowRight}
-          buttonProps={{
-            onClick: () => router.push(`/resource/blog/${blog.id}`)
-          }}
-        />
+        <div>
+          <FOSOButton
+            variants='text'
+            title='Khám phá thêm'
+            icon={ArrowRight}
+            buttonProps={{
+              onClick: () => router.push(`/resource/blog/${blog.id}`)
+            }}
+          />
+        </div>
       </div>
     </div>
   );

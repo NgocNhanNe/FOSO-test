@@ -1,4 +1,9 @@
 import { ReactNode } from 'react';
+import { Metadata } from 'next';
+
+export const metadata: Metadata = {
+  title: 'Trang Chủ'
+};
 
 export default function HomeLayout({ children }: { children: ReactNode }) {
   return (
