@@ -49,7 +49,7 @@ export default function BlogPage() {
   }, [selectedCategory, currentPage]);
 
   return (
-    <div className="pt-[128px] bg-[url('/bg-blog.jpg')] bg-no-repeat bg-cover ">
+    <div className="pt-[128px] bg-[url('/bg-blog.jpg')] bg-no-repeat bg-contain bg-size-[1440px] bg-center">
       <div className='w-full flex justify-center items-center pt-12 pb-[100px]'>
         <div className='w-full max-w-[1280px] flex gap-1 flex-col'>
           <div className='font-light text-center text-sm text-[#17181A] pb-16'>

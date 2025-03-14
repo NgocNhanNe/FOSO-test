@@ -1,3 +1,5 @@
+'use client';
+
 import { BlogCard } from '@/app/_lib/types';
 import Image from 'next/image';
 import { FOSOButton } from '../FOSOButton';
@@ -5,16 +7,18 @@ import Calendar from '../../assets/icons/CalendarBlank.svg';
 import Clock from '../../assets/icons/Clock.svg';
 import ArrowRight from '../../assets/icons/ArrowRight.svg';
 import { formatDate } from '@/app/_lib/utils';
+import { useRouter } from 'next/navigation';
 
 export const FOSOBlogCard = ({ blog }: FOSOBlogCardProps) => {
+  const router = useRouter();
   return (
-    <div className='flex flex-col h-full cursor-pointer'>
+    <div className='flex flex-col cursor-pointer'>
       <div className='w-full rounded-[24px] flex-1'>
         <Image
           src={blog.image}
           alt='img'
-          width={505}
-          height={475}
+          width={400}
+          height={200}
           className='w-full h-full rounded-[24px] object-cover'
         />
       </div>
@@ -27,7 +31,9 @@ export const FOSOBlogCard = ({ blog }: FOSOBlogCardProps) => {
         >
           <span style={{ color: blog.category.style.color }}>{blog.category.name}</span>
         </div>
-        <div className=' h-[72px] text-2xl font-[800] text-[#33404A]'>{blog.title}</div>
+        <div className=' h-[70px] overflow-hidden text-ellipsis line-clamp-2 text-2xl font-[800] text-[#33404A]'>
+          {blog.title}
+        </div>
         <div className='flex gap-3'>
           <div className='flex items-center gap-2'>
             <Image
@@ -49,6 +55,9 @@ export const FOSOBlogCard = ({ blog }: FOSOBlogCardProps) => {
           variants='text'
           title='Khám phá thêm'
           icon={ArrowRight}
+          buttonProps={{
+            onClick: () => router.push(`/resource/blog/${blog.id}`)
+          }}
         />
       </div>
     </div>

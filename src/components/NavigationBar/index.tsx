@@ -1,17 +1,21 @@
+'use client';
+
 import Image from 'next/image';
 import logo from '../../assets/images/logo.svg';
 import iconCountry from '../../assets/icons/icon_country.svg';
 import arrowUpRight from '../../assets/icons/ArrowUpRight.svg';
 import { FOSODropdown, ListItem } from '../FOSODropdown';
 import Link from 'next/link';
+import { useRouter } from 'next/navigation';
 
-const solutions: ListItem[] = [{ label: 'solution1' }, { label: 'solution2' }];
-const resources: ListItem[] = [{ label: 'blog' }, { label: 'resource2' }];
+const solutions: ListItem[] = [{ label: 'solution1' }];
+const resources: ListItem[] = [{ label: 'blog' }];
 const languages: ListItem[] = [
   { label: 'VI', icon: iconCountry },
   { label: 'EN', icon: iconCountry }
 ];
 export const NavigationBar = () => {
+  const router = useRouter();
   return (
     <div className='w-full flex items-center justify-center fixed top-6 text-[#25272A] z-1'>
       <div className='cursor-pointer text-sm flex items-center justify-center w-[1280px] h-auto rounded-[40px] p-[12px_36px] gap-[64px] backdrop-blur-[25px] shadow-[inset_0px_2px_83.99px_rgba(0,0,0,0.02),-9px_20px_59.99px_-24px_rgba(0,0,0,0.05),1px_-1px_0px_0px_#FFFFFF,-1px_1px_0px_0px_#F0F0F0]'>
@@ -20,6 +24,7 @@ export const NavigationBar = () => {
           alt='Company Logo'
           width={134}
           height={55.41}
+          onClick={() => router.push('/home')}
         />
         <ul className='flex gap-2 '>
           <li className='px-2'>Về Chúng tôi</li>
@@ -40,7 +45,7 @@ export const NavigationBar = () => {
           <li className='px-2'>Liên hệ</li>
         </ul>
         <div className='flex items-center justify-center gap-2'>
-          <div className='w-fit h-10 rounded-[40px] py-2 px-3 bg-[#09090b1a] border border-[#09090b0d]'>
+          <div className='w-[102px] h-10 rounded-[40px] py-2 px-3 bg-[#09090b1a] border border-[#09090b0d]'>
             <FOSODropdown
               type='has-icon'
               listItems={languages}
