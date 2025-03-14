@@ -32,7 +32,7 @@ export const FOSODropdown = ({ title, type, listItems }: FOSODropdownProps) => {
                 className='px-4 py-2 hover:bg-gray-100 cursor-pointer '
                 key={i}
                 onClick={() => {
-                  router.push(`/resource/${item.label}`);
+                  router.push(`${item.value}`);
                   setIsOpen(false);
                 }}
               >
@@ -95,4 +95,5 @@ type FOSODropdownProps = {
 export type ListItem = {
   icon?: string;
   label: string;
+  value: string;
 };

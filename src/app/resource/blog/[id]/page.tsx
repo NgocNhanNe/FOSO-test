@@ -23,6 +23,7 @@ import wow from '../../../../assets/icons/hushed-face.svg';
 import yawn from '../../../../assets/icons/yawning-face.svg';
 import pounting from '../../../../assets/icons/pouting-face.svg';
 import { FOSOBlogCard } from '@/components/FOSOBlogCard';
+import { FOSOSpinner } from '@/components/FOSOSpinner';
 
 type Section = {
   id: string;
@@ -83,15 +84,13 @@ export default function BlogDetailPage({ params }: { params: Promise<{ id: numbe
 
   const [sections, setSections] = useState<Section[]>([]);
 
-  const [expendedSections, setExpendedSections] = useState(false);
+  const [expendedSections, setExpendedSections] = useState(true);
 
   const [isActive, setIsActive] = useState<string | null>(null);
 
   const [reactionActive, setReactionActive] = useState<number | null>(null);
 
   const [ratings, setRatings] = useState(ratinglList);
-
-  console.log(reactionActive);
 
   useEffect(() => {
     if (id) {
@@ -128,7 +127,12 @@ export default function BlogDetailPage({ params }: { params: Promise<{ id: numbe
     document.getElementById(sectionId)?.scrollIntoView({ behavior: 'smooth' });
   };
 
-  if (!blog) return <p>Loading...</p>;
+  if (!blog)
+    return (
+      <div className='w-full h-screen flex items-center justify-center'>
+        <FOSOSpinner />
+      </div>
+    );
 
   const handleReaction = (index: number) => {
     setRatings(prevRatings =>
@@ -242,7 +246,7 @@ export default function BlogDetailPage({ params }: { params: Promise<{ id: numbe
                   {ratings.map((item, i) => (
                     <div
                       key={i}
-                      className={`w-[90px] p-1 flex flex-col gap-1 items-center justify-center cursor-pointer 
+                      className={`w-[90px] p-1 flex flex-col gap-1 items-center justify-center cursor-pointer
                         ${
                           reactionActive === i
                             ? 'border border-[#10805B] rounded-[4px]'
@@ -264,7 +268,7 @@ export default function BlogDetailPage({ params }: { params: Promise<{ id: numbe
               </div>
             </div>
           </div>
-          <div className='w-[35%]'>
+          <div className='w-[35%] flex flex-col gap-6'>
             <div className='h-[48px] flex items-center justify-between'>
               <p className='text[#050505] text-2xl font-bold'>Nội dung bài viết</p>
               {expendedSections ? (
@@ -281,25 +285,28 @@ export default function BlogDetailPage({ params }: { params: Promise<{ id: numbe
                 />
               )}
             </div>
-            <div className='w-full '>
-              <ul className=''>
-                {sections.map((section, i) => (
-                  <li
-                    key={i}
-                    className={`cursor-pointer hover:text-[#15AA7A] hover:font-semibold text-md leading-8 ${
-                      section.level === 1 ? '' : 'pl-5'
-                    } ${
-                      isActive === section.id
-                        ? 'text-[#15AA7A] font-semibold'
-                        : 'text-[#33404A]'
-                    }`}
-                    onClick={() => handleScrollToSection(section.id)}
-                  >
-                    {section.title}
-                  </li>
-                ))}
-              </ul>
-            </div>
+            {expendedSections && (
+              <div className='w-full '>
+                <ul className=''>
+                  {sections.map((section, i) => (
+                    <li
+                      key={i}
+                      className={`cursor-pointer hover:text-[#15AA7A] hover:font-semibold text-md leading-8 ${
+                        section.level === 1 ? '' : 'pl-5'
+                      } ${
+                        isActive === section.id
+                          ? 'text-[#15AA7A] font-semibold'
+                          : 'text-[#33404A]'
+                      }`}
+                      onClick={() => handleScrollToSection(section.id)}
+                    >
+                      {section.title}
+                    </li>
+                  ))}
+                </ul>
+              </div>
+            )}
+
             <FOSOAdds />
           </div>
         </div>
@@ -315,13 +322,13 @@ export default function BlogDetailPage({ params }: { params: Promise<{ id: numbe
           ))}
         </div>
       </div>
-      <div className='fixed top-60 left-8'>
+      <div className='fixed top-60 left-8 '>
         <div className='flex flex-col gap-2'>
           <span className='text-[#33404A] font-bold'>Chia sẻ</span>
           {shareIcons.map((shareIcon, i) => (
             <div
               key={i}
-              className='w-12 h-12 rounded-2xl border border-[#15AA7A] p-3 flex items-center justify-center'
+              className='w-12 h-12 bg-white rounded-2xl border border-[#15AA7A] p-3 flex items-center justify-center'
             >
               <Image
                 src={shareIcon}

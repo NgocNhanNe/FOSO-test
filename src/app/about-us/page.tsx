@@ -1,3 +1,3 @@
 export default function AboutUsPage() {
-  return <div>About Us Page</div>;
+  return <h1 className='font-bold text-5xl'>About Us</h1>;
 }

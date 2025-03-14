@@ -7,21 +7,35 @@ import magnifying from '../../../assets/icons/MagnifyingGlass.svg';
 import { FOSOButton } from '@/components/FOSOButton';
 import { FOSOInput } from '@/components/FOSOInput';
 import { BlogCard, CategoryCount } from '@/app/_lib/types';
-import { useEffect, useState } from 'react';
+import { use, useEffect, useState } from 'react';
 import { FOSOBlogCard } from '@/components/FOSOBlogCard';
 import { FOSOPagination } from '@/components/FOSOPagination';
 import { FOSOAdds } from '@/components/FOSOAdds';
+import { usePathname, useRouter, useSearchParams } from 'next/navigation';
+import { useDebounce } from '@/app/_lib/hooks/useDebounce';
 
 const limit = 6;
 
-export default function BlogPage() {
+export default function BlogPage({
+  searchParams
+}: {
+  searchParams: Promise<{ page: number; category: string; title: string }>;
+}) {
+  const { page, category, title } = use(searchParams);
+  const searchParamsHook = useSearchParams();
+  const pathname = usePathname();
+  const { replace } = useRouter();
+
   const [categoriesWithCount, setCategoriesWithCount] = useState<CategoryCount[]>([]);
   const [blogs, setBlogs] = useState<BlogCard[]>([]);
-
-  const [selectedCategory, setSelectedCategory] = useState<string | null>(null);
+  const [selectedCategory, setSelectedCategory] = useState<string | null>(
+    category || null
+  );
+  const [searchTitle, setSearchTitle] = useState<string>(title || '');
+  const debouncedSearchTitle = useDebounce(searchTitle, 300);
 
   const [total, setTotal] = useState(0);
-  const [currentPage, setCurrentPage] = useState(1);
+  const [currentPage, setCurrentPage] = useState(page || 1);
 
   const handleTotal = categoriesWithCount.reduce(
     (acc, category) => acc + category.count,
@@ -38,18 +52,34 @@ export default function BlogPage() {
     const fetchBlogs = async () => {
       const categoryParam = selectedCategory ? `&category=${selectedCategory}` : '';
       const res = await fetch(
-        `/apis/blogs?limit=${limit}&page=${currentPage}${categoryParam}`
+        `/apis/blogs?limit=${limit}&page=${currentPage}${categoryParam}&title=${debouncedSearchTitle}`
       );
       const data = await res.json();
+      const params = new URLSearchParams(searchParamsHook);
+
+      if (currentPage) params.set('page', currentPage + '');
+      if (selectedCategory) params.set('category', selectedCategory);
+      else params.delete('category');
+      if (debouncedSearchTitle) params.set('title', debouncedSearchTitle);
+      else params.delete('title');
+
+      replace(`${pathname}?${params.toString()}`);
       setBlogs(data.blogs);
       setTotal(data.total);
     };
 
     fetchBlogs();
-  }, [selectedCategory, currentPage]);
+  }, [
+    selectedCategory,
+    currentPage,
+    replace,
+    pathname,
+    searchParamsHook,
+    debouncedSearchTitle
+  ]);
 
   return (
-    <div className="pt-[128px] bg-[url('/bg-blog.jpg')] bg-no-repeat bg-contain bg-size-[1440px] bg-center">
+    <div className="pt-[128px] bg-[url('/bg-blog.jpg')] bg-no-repeat bg-contain ">
       <div className='w-full flex justify-center items-center pt-12 pb-[100px]'>
         <div className='w-full max-w-[1280px] flex gap-1 flex-col'>
           <div className='font-light text-center text-sm text-[#17181A] pb-16'>
@@ -96,14 +126,20 @@ export default function BlogPage() {
                   />
                 </div>
               </div>
-              <div className='grid grid-cols-2 gap-8'>
-                {blogs.map((blog, i) => (
-                  <FOSOBlogCard
-                    blog={blog}
-                    key={i}
-                  />
-                ))}
-              </div>
+              {!blogs.length ? (
+                <div className='flex items-center justify-center  w-full text-[#33404A]'>
+                  No Blog Found
+                </div>
+              ) : (
+                <div className='grid grid-cols-2 gap-8'>
+                  {blogs.map((blog, i) => (
+                    <FOSOBlogCard
+                      blog={blog}
+                      key={i}
+                    />
+                  ))}
+                </div>
+              )}
             </div>
           </div>
           <div className='w-[26%] flex flex-col gap-8'>
@@ -112,13 +148,17 @@ export default function BlogPage() {
               <FOSOInput
                 icon={magnifying}
                 placeholder='Tìm kiếm bài viết'
+                value={searchTitle}
+                handleValue={e => setSearchTitle(e.target.value)}
               />
             </div>
             <div className='flex flex-col gap-6'>
               <p className='text-2xl font-[800]'>Danh mục</p>
               <div className='text-[#33404A] flex flex-col gap-4'>
                 <div
-                  className='flex justify-between items-center  pb-2 border-[#f1f5f7] border-b-[1px] cursor-pointer'
+                  className={`flex justify-between items-center  pb-2 border-[#f1f5f7] border-b-[1px] cursor-pointer ${
+                    !selectedCategory ? 'text-[#15AA7A]' : ''
+                  }`}
                   onClick={() => {
                     setSelectedCategory(null);
                     setCurrentPage(1);
@@ -129,7 +169,9 @@ export default function BlogPage() {
                 </div>
                 {categoriesWithCount.map((category, i) => (
                   <div
-                    className='flex justify-between items-center  pb-2 border-[#f1f5f7] border-b-[1px] cursor-pointer'
+                    className={`flex justify-between items-center pb-2 border-[#f1f5f7] border-b-[1px] cursor-pointer ${
+                      selectedCategory === category.categoryName ? 'text-[#15AA7A]' : ''
+                    }`}
                     onClick={() => {
                       setSelectedCategory(category.categoryName);
                       setCurrentPage(1);

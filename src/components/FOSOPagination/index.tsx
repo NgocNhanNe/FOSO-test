@@ -55,7 +55,7 @@ export const FOSOPagination = ({
               key={index}
               onClick={() => onPageChange(page as number)}
               className={`w-10 h-10 px-3 py-2 rounded-md cursor-pointer ${
-                currentPage === page
+                currentPage == page
                   ? 'bg-[#D1F7EA] text-[#052B1E] font-[600]'
                   : 'text-[#809FB8]'
               }`}
