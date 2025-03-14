@@ -4,15 +4,7 @@ import { FOSOButton } from '../FOSOButton';
 import Calendar from '../../assets/icons/CalendarBlank.svg';
 import Clock from '../../assets/icons/Clock.svg';
 import ArrowRight from '../../assets/icons/ArrowRight.svg';
-
-const formatDate = (isoString: string): string => {
-  const date = new Date(isoString);
-  const day = String(date.getDate()).padStart(2, '0');
-  const month = String(date.getMonth() + 1).padStart(2, '0');
-  const year = date.getFullYear();
-
-  return `${day}/${month}/${year}`;
-};
+import { formatDate } from '@/app/_lib/utils';
 
 export const FOSOBlogCard = ({ blog }: FOSOBlogCardProps) => {
   return (
@@ -44,6 +36,7 @@ export const FOSOBlogCard = ({ blog }: FOSOBlogCardProps) => {
             />
             <span className='text-[#667F93]'>{formatDate(blog.publishedAt)}</span>
           </div>
+          <div className='text-[#D9E1E7]'>|</div>
           <div className='flex items-center gap-2'>
             <Image
               src={Clock}

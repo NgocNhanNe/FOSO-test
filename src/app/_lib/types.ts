@@ -9,6 +9,7 @@ export type CategoryStyle = {
 };
 
 export type BlogCard = {
+  id: number;
   image: string;
   category: {
     name: string;
@@ -16,5 +17,7 @@ export type BlogCard = {
   };
   title: string;
   publishedAt: string;
-  readingTime: number; // in minutes
+  readingTime: number;
+  content?: string;
+  highlight?: string;
 };

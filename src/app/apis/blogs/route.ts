@@ -1,4 +1,4 @@
-import { blogCards } from '@/app/_lib/data';
+import { blogs } from '@/app/_lib/data';
 import { NextRequest, NextResponse } from 'next/server';
 
 export async function GET(request: NextRequest) {
@@ -7,7 +7,7 @@ export async function GET(request: NextRequest) {
   const limit = parseInt(url.searchParams.get('limit') || '10', 10);
   const page = parseInt(url.searchParams.get('page') || '1', 10);
 
-  let filteredBlogs = blogCards;
+  let filteredBlogs = blogs;
 
   if (category) {
     filteredBlogs = filteredBlogs.filter(blog => blog.category.name === category);

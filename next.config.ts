@@ -5,7 +5,7 @@ const nextConfig: NextConfig = {
     buildActivity: false
   },
   images: {
-    domains: ['robohash.org']
+    domains: ['robohash.org', 'fososoft.vn']
   }
 };
 
