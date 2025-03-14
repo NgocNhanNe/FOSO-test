@@ -8,14 +8,14 @@ import { formatDate } from '@/app/_lib/utils';
 
 export const FOSOBlogCard = ({ blog }: FOSOBlogCardProps) => {
   return (
-    <div className='flex flex-col w-[500px] cursor-pointer'>
-      <div className='rounded-[24px] '>
+    <div className='flex flex-col h-full cursor-pointer'>
+      <div className='w-full rounded-[24px] flex-1'>
         <Image
           src={blog.image}
           alt='img'
           width={505}
           height={475}
-          className='rounded-[24px] object-contain'
+          className='w-full h-full rounded-[24px] object-cover'
         />
       </div>
       <div className='pt-6 flex flex-col gap-1'>

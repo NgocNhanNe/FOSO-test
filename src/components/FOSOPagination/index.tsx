@@ -36,7 +36,7 @@ export const FOSOPagination = ({
       <button
         onClick={() => onPageChange(currentPage - 1)}
         disabled={currentPage === 1}
-        className='flex gap-2 items-center px-4 py-2 text-[#B3C5D4] '
+        className='flex gap-2 items-center px-4 py-2 text-[#B3C5D4] cursor-pointer'
       >
         <ArrowLeft className='w-6 h-6' /> Trang trước
       </button>
@@ -54,7 +54,7 @@ export const FOSOPagination = ({
             <button
               key={index}
               onClick={() => onPageChange(page as number)}
-              className={`w-10 h-10 px-3 py-2 rounded-md ${
+              className={`w-10 h-10 px-3 py-2 rounded-md cursor-pointer ${
                 currentPage === page
                   ? 'bg-[#D1F7EA] text-[#052B1E] font-[600]'
                   : 'text-[#809FB8]'
@@ -69,7 +69,7 @@ export const FOSOPagination = ({
       <button
         onClick={() => onPageChange(currentPage + 1)}
         disabled={currentPage === totalPages}
-        className='flex gap-2 items-center px-4 py-2 text-[#4D5F6E] '
+        className='flex gap-2 items-center px-4 py-2 text-[#4D5F6E] cursor-pointer'
       >
         Trang kế tiếp <ArrowRight className='w-6 h-6' />
       </button>

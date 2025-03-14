@@ -3,17 +3,14 @@
 import Image from 'next/image';
 import arrowUpRight from '../../../assets/icons/ArrowUpRight.svg';
 import fmrp from '../../../assets/images/fmrp.png';
-import Group from '../../../assets/images/Group.png';
 import magnifying from '../../../assets/icons/MagnifyingGlass.svg';
-import calculate from '../../../assets/images/calculate.png';
-import robot from '../../../assets/images/robot.png';
-import logoMRP from '../../../assets/images/logoMRP.svg';
 import { FOSOButton } from '@/components/FOSOButton';
 import { FOSOInput } from '@/components/FOSOInput';
 import { BlogCard, CategoryCount } from '@/app/_lib/types';
 import { useEffect, useState } from 'react';
 import { FOSOBlogCard } from '@/components/FOSOBlogCard';
 import { FOSOPagination } from '@/components/FOSOPagination';
+import { FOSOAdds } from '@/components/FOSOAdds';
 
 const limit = 6;
 
@@ -99,7 +96,7 @@ export default function BlogPage() {
                   />
                 </div>
               </div>
-              <div className='flex flex-wrap gap-8 justify-center'>
+              <div className='grid grid-cols-2 gap-8'>
                 {blogs.map((blog, i) => (
                   <FOSOBlogCard
                     blog={blog}
@@ -145,68 +142,7 @@ export default function BlogPage() {
                 ))}
               </div>
             </div>
-            <div className='flex flex-col h-[650px] w-full bg-gradient-to-r from-[#013DA0] via-[#025ACE] to-[#0375F3] rounded-[40px]'>
-              <div className='w-full h-[100%]'>
-                <Image
-                  alt='calculate'
-                  src={calculate}
-                  width={400}
-                  height={200}
-                  className='w-full object-contain h-[100%]'
-                />
-              </div>
-              <div className='w-full flex flex-col gap-6 justify-center pt-6 pl-6 pr-6 pb-12'>
-                <div className='flex text-white '>
-                  <div className='w-full h-[100%]'>
-                    <Image
-                      alt='robot'
-                      src={robot}
-                      width={136}
-                      height={136}
-                      className='w-full object-contain h-[100%]'
-                    />
-                  </div>
-                  <div>
-                    <p className='font-semibold text-xl'>Miễn phí dùng thử</p>
-                    <div className='w-full'>
-                      <Image
-                        alt='logoMRP'
-                        src={logoMRP}
-                        width={136}
-                        height={136}
-                        className='w-full object-contain h-[100%]'
-                      />
-                    </div>
-                  </div>
-                </div>
-                <FOSOButton
-                  title='Tham Gia Ngay'
-                  icon={arrowUpRight}
-                  variants='outline'
-                />
-              </div>
-            </div>
-            <div className='flex flex-col h-[650px] w-full bg-gradient-to-r from-[#013DA0] via-[#025ACE] to-[#0375F3] rounded-[40px]'>
-              <div className='w-full h-[100%]'>
-                <Image
-                  alt='Group'
-                  src={Group}
-                  width={400}
-                  height={500}
-                  className='w-full object-contain h-[100%]'
-                />
-              </div>
-              <div className='w-full flex flex-col gap-6 justify-center pt-6 pl-6 pr-6 pb-12'>
-                <p className='text-xl font-semibold text-white leading-7'>
-                  Gia nhập cộng đồng FMRP Việt – Kết nối, chia sẻ, cùng phát triển!
-                </p>
-                <FOSOButton
-                  title='Tham Gia Ngay'
-                  icon={arrowUpRight}
-                  variants='outline'
-                />
-              </div>
-            </div>
+            <FOSOAdds />
           </div>
         </div>
         <div className='w-full max-w-[1440px]'>
