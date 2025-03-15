@@ -1,7 +1,7 @@
 import { blogs } from '@/app/_lib/data';
 import BlogDetail from './BlogDetail';
 
-export async function generateMetadata({ params }: { params: { id: number } }) {
+export async function generateMetadata({ params }: { params: Promise<{ id: number }> }) {
   const { id } = await params;
 
   let title = 'Blog';
