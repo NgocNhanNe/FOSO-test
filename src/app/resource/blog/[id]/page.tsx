@@ -2,11 +2,11 @@ import { blogs } from '@/app/_lib/data';
 import BlogDetail from './BlogDetail';
 
 export async function generateMetadata({ params }: { params: { id: string } }) {
-  const id = Number(params.id);
+  const { id } = await params;
 
   let title = 'Blog';
 
-  const blog = blogs.find(blog => blog.id === id);
+  const blog = blogs.find(blog => blog.id === Number(id));
 
   if (blog) title = blog.title;
 
