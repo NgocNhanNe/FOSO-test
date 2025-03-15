@@ -3,6 +3,7 @@
 import Image from 'next/image';
 import logo from '../../assets/images/logo.svg';
 import iconCountry from '../../assets/icons/icon_country.svg';
+import en from '../../assets/icons/en.png';
 import arrowUpRight from '../../assets/icons/ArrowUpRight.svg';
 import { FOSODropdown, ListItem } from '../FOSODropdown';
 import Link from 'next/link';
@@ -15,7 +16,7 @@ const solutions: ListItem[] = [
 const resources: ListItem[] = [{ label: 'Blog', value: '/resource/blog' }];
 const languages: ListItem[] = [
   { label: 'VI', value: 'vi', icon: iconCountry },
-  { label: 'EN', value: 'en', icon: iconCountry }
+  { label: 'EN', value: 'en', icon: en }
 ];
 export const NavigationBar = () => {
   const router = useRouter();
