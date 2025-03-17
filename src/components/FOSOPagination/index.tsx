@@ -38,7 +38,8 @@ export const FOSOPagination = ({
         disabled={currentPage === 1}
         className='flex gap-2 items-center px-4 py-2 text-[#B3C5D4] cursor-pointer'
       >
-        <ArrowLeft className='w-6 h-6' /> Trang trước
+        <ArrowLeft className='w-6 h-6' />{' '}
+        <span className='hidden md:block'>Trang trước</span>
       </button>
 
       <div>
@@ -71,7 +72,8 @@ export const FOSOPagination = ({
         disabled={currentPage === totalPages}
         className='flex gap-2 items-center px-4 py-2 text-[#4D5F6E] cursor-pointer'
       >
-        Trang kế tiếp <ArrowRight className='w-6 h-6' />
+        <span className='hidden md:block'>Trang kế tiếp</span>{' '}
+        <ArrowRight className='w-6 h-6' />
       </button>
     </div>
   );

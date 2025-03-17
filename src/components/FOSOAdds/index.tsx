@@ -8,8 +8,8 @@ import { FOSOButton } from '@/components/FOSOButton';
 
 export const FOSOAdds = () => {
   return (
-    <div className='w-full flex flex-col gap-6'>
-      <div className='flex gap-8 items-center justify-center flex-col max-w-[366px] h-[650px] w-full bg-gradient-to-r from-[#013DA0] via-[#025ACE] to-[#0375F3] rounded-[40px]'>
+    <div className=' w-full flex xl:flex-col gap-6 flex-row justify-center '>
+      <div className=' flex gap-8 items-center justify-between flex-col max-w-[366px] py-10 w-full bg-gradient-to-r from-[#013DA0] via-[#025ACE] to-[#0375F3] rounded-[40px]'>
         <div className=''>
           <Image
             alt='calculate'
@@ -47,7 +47,7 @@ export const FOSOAdds = () => {
             </div>
           </div>
         </div>
-        <div className='w-full px-6'>
+        <div className='w-full px-6  '>
           <FOSOButton
             title='Tham Gia Ngay'
             icon={arrowUpRight}
@@ -56,7 +56,7 @@ export const FOSOAdds = () => {
           />
         </div>
       </div>
-      <div className='flex flex-col max-w-[366px] h-[650px] w-full bg-gradient-to-r from-[#013DA0] via-[#025ACE] to-[#0375F3] rounded-[40px]'>
+      <div className='flex flex-col max-w-[366px] py-10 w-full bg-gradient-to-r from-[#013DA0] via-[#025ACE] to-[#0375F3] rounded-[40px]'>
         <div className='w-full h-[100%]'>
           <Image
             alt='Group'
@@ -67,15 +67,18 @@ export const FOSOAdds = () => {
             className='w-full object-contain h-[100%]'
           />
         </div>
-        <div className='w-full flex flex-col gap-6 justify-center pt-6 pl-6 pr-6 pb-12'>
+        <div className='w-full flex flex-col gap-6 justify-center pt-6 pl-6 pr-6'>
           <p className='text-xl font-semibold text-white leading-7'>
             Gia nhập cộng đồng FMRP Việt – Kết nối, chia sẻ, cùng phát triển!
           </p>
-          <FOSOButton
-            title='Tham Gia Ngay'
-            icon={arrowUpRight}
-            variants='outline'
-          />
+          <div className='w-full'>
+            <FOSOButton
+              title='Tham Gia Ngay'
+              icon={arrowUpRight}
+              variants='outline'
+              buttonProps={{ style: { width: '100%' } }}
+            />
+          </div>
         </div>
       </div>
     </div>

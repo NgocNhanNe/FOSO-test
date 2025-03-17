@@ -25,7 +25,7 @@ export const FOSODropdown = ({ title, type, listItems }: FOSODropdownProps) => {
         <span>{title}</span> <ChevronDown className='w-4 h-4' />
       </button>
       {isOpen && (
-        <div className='absolute left-0 mt-2 w-40 bg-white border border-gray-200 rounded-lg shadow-lg'>
+        <div className='absolute left-0 mt-2 w-40 bg-white border border-gray-200 rounded-lg shadow-lg z-1'>
           <ul className='py-2 text-gray-700'>
             {listItems.map((item, i) => (
               <li

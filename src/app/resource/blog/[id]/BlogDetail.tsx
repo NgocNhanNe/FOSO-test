@@ -152,13 +152,13 @@ export default function BlogDetail({ params }: { params: Promise<{ id: number }>
 
   return (
     <div className='relative w-full flex flex-col justify-center items-center pt-[128px] px-10 z-0 bg-[#f9fbfc]'>
-      <div className='w-full max-w-[1440px] flex flex-col gap-6'>
+      <div className='w-full xl:max-w-[1440px] max-w-3xl flex flex-col gap-6'>
         <div className='font-light text-sm text-[#17181A] pb-6'>
           Trang chủ &gt; Tài nguyên &gt; Blog &gt;
           <span className='font-semibold'> {blog.category.name}</span>
         </div>
-        <div className='w-full flex gap-8'>
-          <div className='w-[65%] flex flex-col gap-4'>
+        <div className='w-full flex xl:flex-row flex-col-reverse gap-8'>
+          <div className='xl:w-[65%] w-full flex flex-col gap-4'>
             <div
               className='py-1 px-2 w-fit rounded-[8px] text-xs'
               style={{
@@ -268,7 +268,7 @@ export default function BlogDetail({ params }: { params: Promise<{ id: number }>
               </div>
             </div>
           </div>
-          <div className='w-[35%] flex flex-col gap-6'>
+          <div className='xl:w-[35%] w-full flex flex-col gap-6 '>
             <div className='h-[48px] flex items-center justify-between'>
               <p className='text[#050505] text-2xl font-bold'>Nội dung bài viết</p>
               {expendedSections ? (
@@ -307,12 +307,14 @@ export default function BlogDetail({ params }: { params: Promise<{ id: number }>
               </div>
             )}
 
-            <FOSOAdds />
+            <div className='hidden md:block'>
+              <FOSOAdds />
+            </div>
           </div>
         </div>
       </div>
-      <div className='w-full'>
-        <p>Bài viết liên quan</p>
+      <div className='w-full flex flex-col gap-4'>
+        <p className='text-4xl font-bold'>Bài viết liên quan</p>
         <div className='w-full grid grid-cols-3 gap-8'>
           {relatedBlogs.map((blog, i) => (
             <FOSOBlogCard
@@ -698,7 +700,7 @@ const relatedBlogs: BlogCard[] = [
         backgroundColor: '#E2F0FE'
       }
     },
-    title: 'dolore adipiscing do magna dolor et eiusmod aliqua',
+    title: 'Tại sao BOM quan trọng trong quản lý sản xuất?',
     publishedAt: '2025-03-13T19:57:00.811Z',
     readingTime: 11
   },
@@ -713,7 +715,7 @@ const relatedBlogs: BlogCard[] = [
         backgroundColor: '#E2F0FE'
       }
     },
-    title: 'aliqua magna do magna Lorem',
+    title: 'Các loại hình sản xuất trong doanh nghiệp',
     publishedAt: '2025-03-13T19:57:00.811Z',
     readingTime: 3
   }
