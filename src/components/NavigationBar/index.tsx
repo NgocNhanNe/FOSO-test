@@ -31,7 +31,7 @@ export const NavigationBar = () => {
           alt='Company Logo'
           width={134}
           height={55.41}
-          onClick={() => router.push('/home')}
+          onClick={() => router.push('/')}
         />
         <div
           className={`${
