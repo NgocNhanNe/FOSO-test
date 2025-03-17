@@ -30,7 +30,7 @@ export default function RootLayout({
           href='/logo.svg'
         />
       </head>
-      <body className={`${raleway.className}`}>
+      <body className={`${raleway.className} `}>
         <NavigationBar />
         {children}
       </body>
